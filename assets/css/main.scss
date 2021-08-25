@@ -1,0 +1,24 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+$primary-color: #2f495e;
+$background-color: #f6f7f7;
+$date-color: #f5f5f5;
+$web-color: #ff7e6f;
+$music-color:  #94c3b4;
+$diary-color: #8bafbb;
+$paper-bg: url("{{ '/assets/img/paper.png' | relative_url }}");
+
+// $paper-bg: url("/assets/img/paper.png");
+// "{{ '/assets/img/paper.png' | relative_url }}"
+
+// Import partials.
+@import "_zeroset.scss";
+@import "_basic.scss";
+@import "_atom-one-dark.scss";
+@import "_grid.scss";
+@import "_inputs.scss";
+@import "_style.scss";

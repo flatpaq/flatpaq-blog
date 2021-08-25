@@ -1,0 +1,20 @@
+
+  <div id="sidebar-content" class="sidebar-cont index-sidebar">
+
+    <div class="sidebar-cat-nav-wrapper">
+      {% include cat-nav.html %}
+    </div>
+  
+    <div class="scroll-bar"></div>
+
+    {% if site.tags %}
+    <ul class="tags clearfix">
+      {% for tag in site.tags %}
+      <li><a href="{{ '/tag/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% include social.html %}
+
+  </div>

@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="{{ "/assets/img/favicon.png" | relative_url }}">
+  {% seo %}
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <script src="{{ "/assets/js/main.js" | relative_url }}" defer></script>
+
+  <!-- 
+
+  しかしまさにこの貧窮の中で、
+	僕は力が戻ってくるのを感じ、
+	ここから立ち直るのだ、
+	くじけて置いていた鉛筆をとり直し、
+	絵に戻るのだと自分に言い聞かせた。
+   Vincent Willem van Gogh
+  
+  -->
+
+  {% feed_meta %}
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+</head>

@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<main class="wrapper front-page">
+  <div class="container">
+
+  {%- if site.posts.size > 0 -%}
+
+    {% if page.type == 'year' %}
+     <h1>{{ page.date | date: '%Y年' }}</h1>
+    {% elsif page.type == 'month' %}
+      <h1>{{ page.date | date: '%Y年%m月' }}</h1>
+    {% elsif page.type == 'day' %}
+      <h1>{{ page.date | date: '%Y年%m月%d日' }}</h1>
+    {% elsif page.type == 'category' %}
+      <h1>{{ page.title }}</h1>
+    {% elsif page.type == 'tag' %}
+      <h1>{{ page.type }} {{ page.title }}</h1>
+    {%- endif -%}
+
+    <!-- This loops through the paginated posts -->
+    <div class="row">
+
+      <aside class="sidebar col-12 display-none-md">
+        {% include index-sidebar.html %}
+      </aside>
+    
+      {% for post in page.posts %}
+      <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 index-post">
+        <a href="{{ post.url | relative_url }}" class="post-link">
+
+          {% assign category = post.categories[0] %}
+
+          <article class="card {{ category }} row-nocol loading"> 
+
+            <div class="post-thumbnail" style="background-image: url('{{ post.thumbnail | default: '/assets/img/default-thumbnail.png' | relative_url }}');">
+
+              <div class="index-cat row nopad just-center align-middle"><object><a href="{{ category | relative_url }}">{{ category }}</a></object></div>
+              <div class="enter-arrow row nopad just-center align-middle"></div>
+
+            </div>
+            
+            <div class="index-title">
+              <h1>{{ post.title | escape }}</h1>
+            </div>
+
+            <div class="page-date-area row-nocol just-center">
+              <p class="page-date-created row-nocol align-middle">
+                <i class="icon-calendar row-nocol align-middle"></i>
+                <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y年%m月%d日' }}</time>
+              </p>
+            </div>
+          </article>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+  {%- endif -%}
+
+</div>
+</main>

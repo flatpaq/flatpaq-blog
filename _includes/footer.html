@@ -1,0 +1,62 @@
+<footer>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+
+        <div class="footer-cat-nav-wrapper">
+          {% include cat-nav.html %}
+        </div>
+
+      </div>
+
+      <section class="col-md-4 footer-tags">
+        <h1>Tags</h1>
+        {% if site.tags %}
+        <ul class="tags clearfix">
+          {% for tag in site.tags %}
+          <li><a href="{{ '/tag/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </section>
+
+      <div class="col-md-4">
+
+        <div class="logo-area">
+          <h1 class="logo">
+            <div class="row-nocol just-start align-middle">         
+              <a href="{{ '/' | relative_url }}"><img class="logo-icon" src="{{ '/assets/img/logo-dark.svg' | relative_url }}" alt="flatpaq loog"></a>
+              <a href="{{ '/' | relative_url }}"><img class="logo-typ" src="{{ '/assets/img/logo-typ-dark.svg' | relative_url }}" alt="flatpaq typography"></a>          
+            </div>
+          </h1>
+        </div>
+
+        <div class="footer-description">
+          <!-- <p>{{ site.description | escape }}</p> -->
+        </div>
+
+        <div class="social-icon-area">
+          <div class="row-nocol just-start-md">
+
+            {% include social.html %}
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row-nocol just-center">
+      <p class="copy-right">Copyright &copy; {{ site.title | escape }}</p>
+    </div>
+
+  </div>
+
+</footer>

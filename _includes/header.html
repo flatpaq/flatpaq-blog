@@ -1,0 +1,45 @@
+<header>
+  
+  <div class="header-cont">
+    <div class="container">
+      <nav class="logo-area-wrapper row-nocol align-middle-md">
+
+        <nav class="mobile-menu row-nocol align-middle">
+          <button class="hamburger hamburger--elastic" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>        
+        </nav>
+    
+        <div class="logo-area">
+          <h1 class="logo">
+            <div class="row-nocol just-center just-start-md align-middle">         
+              <a href="{{ '/' | relative_url }}"><img class="logo-icon" src="{{ '/assets/img/logo.svg' | relative_url }}" alt="flatpaq loog"></a>
+              <a href="{{ '/' | relative_url }}"><img class="logo-typ" src="{{ '/assets/img/logo-typ.svg' | relative_url }}" alt="flatpaq typography"></a>
+            </div>
+          </h1>
+        </div>
+
+        <div class="cat-nav">
+          <ul class="nav-list row align-middle-md">
+            <li class="nav-item col-md-auto"><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li class="nav-item col-md-auto"><a href="{{ '/web/' | relative_url }}">Web</a></li>
+            <li class="nav-item col-md-auto"><a href="{{ '/music/' | relative_url }}">Music</a></li>
+            <li class="nav-item col-md-auto"><a href="{{ '/diary/' | relative_url }}">Diary</a></li>
+          </ul>      
+        </div>
+
+        <div class="social-icon-area">
+          <div class="row-nocol just-end-md">
+
+            {% include social.html %}
+
+          </div>
+        </div>
+
+      </nav><!-- logo-area-wrapper end -->
+    </div>  
+  </div><!-- header-cont end -->
+
+</header>

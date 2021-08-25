@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<!-- <div class="top-visual"></div> -->
+
+<main class="wrapper front-page">
+  <div class="container">
+
+  {%- if site.posts.size > 0 -%}
+
+    <!-- This loops through the paginated posts -->
+    <div class="row">
+
+      <aside class="sidebar col-12 display-none-md">
+        {% include index-sidebar.html %}
+      </aside>
+    
+      {% for post in paginator.posts %}
+      <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 index-post">
+        <a href="{{ post.url | relative_url }}" class="post-link">
+
+          {% assign category = post.categories[0] %}
+
+          <article class="card {{ category }} row-nocol loading"> 
+
+            <div class="post-thumbnail" style="background-image: url('{{ post.thumbnail | default: "/assets/img/default-thumbnail.png" | relative_url }}');">
+
+              <div class="index-cat row nopad just-center align-middle"><object><a href="{{ category | relative_url }}">{{ category }}</a></object></div>
+              <div class="enter-arrow row nopad just-center align-middle"></div>
+
+            </div>
+            
+            <div class="index-title">
+              <h1>{{ post.title | escape }}</h1>
+            </div>
+
+            <div class="page-date-area row-nocol just-center">
+              <p class="page-date-created row-nocol align-middle">
+                <i class="icon-calendar row-nocol align-middle"></i>
+                <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y年%m月%d日' }}</time>
+              </p>
+            </div>
+          </article>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+
+        {% if paginator.previous_page %}
+          <div><a href="{{ paginator.previous_page_path | relative_url }}">Next</a></div>
+        {% else %}
+          <div><span>Next</span></div>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <div><span class="currnet-page-number">{{ page }}</span></div>
+          {% elsif page == 1 %}
+            <div><a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a></div>
+          {% else %}
+            <div><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></div>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+          <div><a href="{{ paginator.next_page_path | relative_url }}">Prev</a></div>
+          {% else %}
+          <div><span>Prev</span></div>
+          {% endif %}
+      </div>
+    {% endif %}
+
+  {%- endif -%}
+
+</div>
+</main>

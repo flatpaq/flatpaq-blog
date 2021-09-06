@@ -5,7 +5,7 @@ window.onload = function() {
 }
 
 // Hamburger Menu Button
-document.addEventListener('DOMContentLoaded', hamburgerBtn);
+// document.addEventListener('DOMContentLoaded', hamburgerBtn);
 function hamburgerBtn() {
   var forEach=function(t,o,r){
     if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);
@@ -255,15 +255,31 @@ window.addEventListener('load', mobileMenu);
 function mobileMenu() {
 
   let mobileMenuBtn = document.querySelector('.mobile-menu');
-  let bodyShadow = document.querySelector('.wrapper');
+  let modalShadow = document.querySelector('.modal-shadow');
   let sidebarActive = document.querySelector('.sidebar-cont');
+  let hamburgerMenu = document.querySelector('.hamburger');
 
-  bodyShadow.classList.remove('active');
+  modalShadow.classList.remove('active');
   sidebarActive.classList.remove('active');
+  hamburgerMenu.classList.remove('is-active');
 
   mobileMenuBtn.addEventListener('click', function() {
-    bodyShadow.classList.toggle('active');
-    sidebarActive.classList.toggle('active');
+
+    if (sidebarActive.classList.contains('active')) {
+      modalShadow.classList.remove('active');
+      sidebarActive.classList.remove('active');
+      hamburgerMenu.classList.remove('is-active');  
+    } else {
+      modalShadow.classList.add('active');
+      sidebarActive.classList.add('active');
+      hamburgerMenu.classList.add('is-active');
+    }
+  }, false);
+
+  modalShadow.addEventListener('click', function() {
+    modalShadow.classList.remove('active');
+    sidebarActive.classList.remove('active');
+    hamburgerMenu.classList.remove('is-active');
   }, false);
 
 };
@@ -457,12 +473,12 @@ barba.hooks.afterLeave(() => {
 });
 
 barba.hooks.beforeEnter((data) => {
-  let hamburgers = document.querySelectorAll(".hamburger");
-  if (hamburgers.length > 0) {
-    hamburgers.forEach(function(hamburger) {
-      hamburger.classList.remove('is-active');
-    });
-  }
+  // let hamburgers = document.querySelectorAll(".hamburger");
+  // if (hamburgers.length > 0) {
+  //   hamburgers.forEach(function(hamburger) {
+  //     hamburger.classList.remove('is-active');
+  //   });
+  // }
 
   data.current.container.remove();
 

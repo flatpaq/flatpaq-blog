@@ -289,16 +289,16 @@ aside.sidebar {
   left: 0%;
   animation: active-sidebar 0.25s ease-in-out 0s normal;
 }
-.wrapper.active:after {
-  position: fixed;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  top: 0px;
-  left: 0px;
-  z-index: 90;
-}
+// .wrapper.active:after {
+//   position: fixed;
+//   content: "";
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.4);
+//   top: 0px;
+//   left: 0px;
+//   z-index: 90;
+// }
 @keyframes active-sidebar {
   0% {
     left: -100%;
@@ -463,6 +463,22 @@ main.wrapper:before {
   z-index: 0;
   // background: linear-gradient(165deg, rgba(248, 249, 249, 0.8), rgba(248, 249, 249, 0.8)),$paper-bg,#fefefe repeat center;
   background: $background-color;
+}
+
+.modal-shadow {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0px;
+  left: 0px;
+  z-index: 90;
+  display: none;
+  &.active {
+    display: block;
+    backdrop-filter: blur(2px);
+  }
 }
 
 /* front-page */

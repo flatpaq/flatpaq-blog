@@ -4,7 +4,7 @@ title:  "ブログやドキュメント作成に便利なMarkdownの書き方"
 date:   2020-07-21
 categories: web
 tags: markdown web note
-thumbnail: '/assets/media/2020-07-21-markdown-note/markdown-thumbnail.png'
+thumbnail: '/assets/media/2020-07-21-markdown-note/markdown-thumbnail.svg'
 ---
 
 ![ブログやドキュメント作成に便利なMarkdownの書き方のサムネイルイメージ]({{ '/assets/media/2020-07-21-markdown-note/markdown-thumbnail.png' | relative_url }})

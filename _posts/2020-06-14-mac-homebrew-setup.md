@@ -5,7 +5,7 @@ date:   2020-06-14
 lastmod: 2020-09-17
 categories: web
 tags: mac homebrew web
-thumbnail: '/assets/media/2020-06-14-mac-homebrew-setup/mac-homebrew-setup-thumbnail.svg'
+thumbnail: '/assets/media/2020-06-14-mac-homebrew-setup/mac-homebrew-setup-thumbnail.png'
 ---
 
 

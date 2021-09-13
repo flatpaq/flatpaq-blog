@@ -8,7 +8,7 @@ tags: web npm webpack frontend node
 thumbnail: '/assets/media/2020-11-29-npm-and-webpack-basics/npm-webpack.png'
 ---
 
-![npmとwebpackを利用してフロントエンド開発環境を構築するのサムネイルイメージ]({{ '/assets/media/2020-11-29-npm-and-webpack-basics/npm-webpack.png' | relative_url }})
+![npmとwebpackを利用してフロントエンド開発環境を構築するのサムネイルイメージ]({{ '/assets/media/2020-11-29-npm-and-webpack-basics/npm-webpack.svg' | relative_url }})
 
 
 ## はじめに

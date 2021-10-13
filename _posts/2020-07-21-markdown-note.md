@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ブログやドキュメント作成に便利なMarkdownの書き方"
+title:  "ブログやドキュメントの作成に便利なMarkdownの書き方"
 date:   2020-07-21
 categories: web
 tags: markdown web note

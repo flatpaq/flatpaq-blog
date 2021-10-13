@@ -65,10 +65,10 @@ WindowsではWSL2を利用してNode.jsをインストールすることもで�
 WSL2からインストールする場合は以下のMicrosoftのページを参考にしてください。(少し分かりづらい気もしますが...)
 
 {:.embed}
-[Windows 10 用 Windows Subsystem for Linux のインストール ガイド](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10)
+[Windows 10 用 Windows Subsystem for Linux のインストール ガイド](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10){:target="_blank"}{:rel="noopener noreferrer"}
 
 {:.embed}
-[WSL 2 を使用して Node.js 開発環境を設定する](https://docs.microsoft.com/ja-jp/windows/nodejs/setup-on-wsl2)
+[WSL 2 を使用して Node.js 開発環境を設定する](https://docs.microsoft.com/ja-jp/windows/nodejs/setup-on-wsl2){:target="_blank"}{:rel="noopener noreferrer"}
 
 ### Mac
 
@@ -76,7 +76,7 @@ Macでは[Homebrew](https://brew.sh/index_ja.html)を利用してNode.jsをイ�
 Homebrew自体のインストールは以下のページを参考にしてください。
 
 {:.embed}
-[MacにHomebrewを導入する]({% link _posts/2020-06-14-mac-homebrew-setup.md %})
+[MacにHomebrewを導入する]({% link _posts/2020-06-14-mac-homebrew-setup.md %}){:target="_blank"}{:rel="noopener noreferrer"}
 
 Homebrewをインストールしたら、下記のコマンドをターミナルに入力してください。
 
@@ -149,7 +149,7 @@ project-name/package.json
 
 **パッケージのインストールは、`package.json`のあるディレクトリ内で、`npm install パッケージ名`あるいは省略形の`npm i パッケージ名`コマンドで行います。**
 
-例として、試しに[SimpleMDE](https://simplemde.com/)というMarkdownエディタをインストールしてみます。
+例として、試しに[SimpleMDE](https://simplemde.com/){:target="_blank"}{:rel="noopener noreferrer"}というMarkdownエディタをインストールしてみます。
 
 
 ```bash
@@ -236,7 +236,7 @@ project-name/
 後述の「パッケージのバージョンの指定方法」と「package.jsonをもとにパッケージをインストールする」の項で詳しく説明しますが、**`package.json`は手動で編集することができますが、`package-lock.json`は原則的に直接編集することはありません。`package.json`をもとに、実際にインストールされたパッケージのバージョン情報を反映したファイルが`package-lock.json`となっているからです。**
 
 
-### Dオプションでのインストール
+### `-D`オプションでのインストール
 
 `npm install`コマンドに`--save-dev`もしくは省略形の`-D`オプションを付けると、**開発の時だけに利用し、実際のアプリケーションには組み込まれないパッケージとしてインストール**することができます。
 
@@ -413,7 +413,7 @@ $ npm up simplemde
 npmのその他の使い方については公式ドキュメントをご覧ください。  
 
 {:.embed}
-[npm Docs](https://docs.npmjs.com/)
+[npm Docs](https://docs.npmjs.com/){:target="_blank"}{:rel="noopener noreferrer"}
 
 
 --------
@@ -504,7 +504,9 @@ project-name/dist/index.html
 ## SCSSファイル
 
 `src/style.scss`のコンテンツを記述します。  
-ここでは例として、見出しの文字列のスタイルを、Sassの変数機能を使って定義しています。
+ここでは例として、見出しのスタイルを、Sassの変数機能を使って定義しています。
+
+無事webpackが実行されるとスタイルが変更されます。
 
 {:.file-path}
 project-name/src/style.scss
@@ -548,7 +550,7 @@ import "./style.scss"
 Javascriptのimport文の詳しい使い方については下記リンクが参考になるかと思います。  
 
 {:.embed}
-[import - JavaScript MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)
+[import - JavaScript MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import){:target="_blank"}{:rel="noopener noreferrer"}
 </section>
 
 ## webpackのインストール
@@ -561,7 +563,7 @@ Javascriptのimport文の詳しい使い方については下記リンクが参�
 $ npm install -D webpack webpack-cli @babel/core @babel/preset-env babel-loader css-loader style-loader sass sass-loader mini-css-extract-plugin
 ```
 
-このインストールにはDオプションを付けています。webpackをはじめ今回使用するパッケージは、実際のアプリケーションには使わず、開発環境のみで使用するためDオプションをつけてインストールします。
+このインストールには`-D`オプションを付けています。webpackをはじめ今回使用するパッケージは、実際のアプリケーションには使わず、開発環境のみで使用するため`-D`オプションをつけてインストールします。
 
 今のコマンドで以下のパッケージをインストールしました。かなりたくさんあります。`node_modules`内にもとんでもない数のパッケージが入っています...。  
 では、どんなパッケージをインストールしたのか見ていきます。
@@ -804,7 +806,7 @@ project-name/
 webpackをさらに詳しく知りたい場合については、[公式ドキュメント](https://webpack.js.org/concepts/)を参考にしてください。  
 
 {:.embed}
-[webpack](https://webpack.js.org/concepts/)
+[webpack](https://webpack.js.org/concepts/){:target="_blank"}{:rel="noopener noreferrer"}
 
 ## Watchオプション
 

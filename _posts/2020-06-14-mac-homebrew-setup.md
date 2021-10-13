@@ -34,7 +34,7 @@ Xcode本体をインストールせず、Command Line Toolsのみをインスト
 まずはApp Storeから*Xcode*をインストールします。  
 
 {:.embed}
-[Xcode - App Store](https://itunes.apple.com/jp/app/xcode/id497799835?mt=12)
+[Xcode - App Store](https://itunes.apple.com/jp/app/xcode/id497799835?mt=12){:target="_blank"}{:rel="noopener noreferrer"}
 
 ## Command Line Tools for Xcodeの設定
 
@@ -82,7 +82,7 @@ Build version 10B61
 **インストール用のスクリプトは変更される可能性がありますので、必ず公式サイトから取得するようにしてください。**
 
 {:.embed}
-[Homebrew — macOS 用パッケージマネージャー](https://brew.sh/index_ja.html)
+[Homebrew — macOS 用パッケージマネージャー](https://brew.sh/index_ja.html){:target="_blank"}{:rel="noopener noreferrer"}
 
 ![Homebrew Screen shot]({{ '/assets/media/2020-06-14-mac-homebrew-setup/homebrew-screen-shot.png' | relative_url }})
 
@@ -121,7 +121,7 @@ Homebrewでは、パッケージのことをFormulaeと呼びます。
 インストール可能なFormulaeのリストは公式サイトに掲載されています。
 
 {:.embed}
-[Homebrew Formulae](https://formulae.brew.sh/)
+[Homebrew Formulae](https://formulae.brew.sh/){:target="_blank"}{:rel="noopener noreferrer"}
 
 ### パッケージのアンインストール
 
@@ -244,7 +244,7 @@ postgresql stopped
 詳しい使い方は公式サイトをご確認ください。
 
 {:.embed}
-[Homebrew — macOS 用パッケージマネージャー](https://brew.sh/index_ja.html)
+[Homebrew — macOS 用パッケージマネージャー](https://brew.sh/index_ja.html){:target="_blank"}{:rel="noopener noreferrer"}
 
 ### Homebrew Taps
 
@@ -262,7 +262,7 @@ $ brew tap 追加するリポジトリのユーザ名/追加するリポジト�
 詳しくは公式サイトのドキュメントをご覧ください。
 
 {:.embed}
-[Homebrew Taps](https://docs.brew.sh/Taps)
+[Homebrew Taps](https://docs.brew.sh/Taps){:target="_blank"}{:rel="noopener noreferrer"}
 
 ### Homebrew Cask
 
@@ -282,5 +282,5 @@ $ brew install atom --cask
 詳しくは公式のGithubページをご覧ください。
 
 {:.embed}
-[Homebrew Cask](https://github.com/Homebrew/homebrew-cask)
+[Homebrew Cask](https://github.com/Homebrew/homebrew-cask){:target="_blank"}{:rel="noopener noreferrer"}
 

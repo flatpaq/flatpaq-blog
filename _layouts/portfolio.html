@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<main class="wrapper portfolio">
+  <div class="container">
+
+<div class="row">
+  
+  <aside class="sidebar col-md-3 loading">
+    {% include sidebar.html %}
+  </aside>
+
+  <article class="post page col-md-9">
+
+    <div class="page-header loading">
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-home"><a href="{{ '/' | relative_url }}"></a></li>
+        {% for category in page.categories %}
+        <li class="page-cat"><a href="{{ category | relative_url }}" class="{{ category }}">{{ category }}</a></li>
+        {% endfor %}
+      </ol>
+
+      <h1 class="page-title">{{ page.title | escape }}</h1>
+
+
+      {% if page.date %}
+        <div class="page-date-area row-nocol just-start">
+          <p class="page-date-created row-nocol align-middle">
+            <i class="icon-calendar row-nocol align-middle"></i>
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y年%m月%d日作成' }}</time>
+          </p>
+
+          {% if page.lastmod %}
+            <p class="page-date-updated row-nocol align-middle">
+              <i class="icon-rewrite row-nocol align-middle"></i>
+              <time datetime="{{ page.lastmod | date: '%Y-%m-%d' }}">{{ page.lastmod | date: '%Y年%m月%d日更新' }}</time>
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if page.tags %}
+      <ul class="tags clearfix">
+        {% for tag in page.tags %}
+        <li><a href="{{ '/tag/' | append: tag | relative_url }}">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    </div>
+
+    <div class="page-content loading">
+      {{ content }}
+    </div>
+
+    <!-- article footnote -->
+    <div class="footnote row">
+
+      <!--
+      <div class="share-area col-md-12">
+        <div class="social-icon-wrap"><div class="social-icon icon-share row nopad just-center align-middle"></div></div>    
+          <textarea class="form">{{ page.url | relative_url }}</textarea>
+      </div>
+      -->
+
+    </div>
+
+    <!-- pager -->
+    <div class="pager row">
+
+      <p class="next-pager col-md-6">
+        {% if page.next %}
+          <a href="{{ page.next.url | relative_url }}" class="row nopad just-center align-middle ripple"><span class="pager-arrow col-1"></span><span class="pager-article col-11">Next &colon; &nbsp; {{ page.next.title }}</span></a>
+        {% endif %}
+      </p>
+    
+      <p class="prev-pager col-md-6">
+        {% if page.previous %}
+          <a href="{{ page.previous.url | relative_url }}" class="row nopad just-center align-middle ripple"><span class="pager-article col-11">Prev &colon; &nbsp; {{ page.previous.title }}</span><span class="pager-arrow col-1"></span></a>
+        {% endif %}
+      </p>
+      
+    </div><!--pager-->
+
+    <p class="page-url"><a href="{{ page.url | relative_url }}" hidden></a></p>
+  </article>
+
+</div><!-- row end -->
+</div>
+</main>

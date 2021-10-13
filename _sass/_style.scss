@@ -151,12 +151,13 @@ header nav.mobile-menu {
   // box-shadow: 0px 3px 0px 0px rgba(100,100,100,0.12), 0px 4px 1px 0px rgba(100,100,100,0.06);
 }
 .social-icon.icon-twitter::before {
-  // background: #1ca1f2;
   color: #1ca1f2;
 }
 .social-icon.icon-rss::before {
-  // background: #ff9540;
   color: #ff9540;
+}
+.social-icon.icon-github::before {
+  color: $primary-color;
 }
 .social-icon.icon-share {
   background: #999;
@@ -173,7 +174,7 @@ footer {
     margin-left: 16px;
   }
 
-  .social-icon.icon-twitter, .social-icon.icon-rss {
+  .social-icon.icon-twitter, .social-icon.icon-rss, .social-icon.icon-github {
     background: #f3f0e5;
   }
 
@@ -355,6 +356,7 @@ aside.sidebar h1.page-title {
 	color: $primary-color;
 	text-decoration: none;
   font-weight: 400;
+  font-size: 93.7%;
   display: inline-block;
   padding: 2px 16px;
   position: relative;
@@ -375,10 +377,10 @@ aside.sidebar h1.page-title {
   padding-left: 32px;
 }
 #toc ol:not(:first-child) li + ol li a {
-  padding-left: 64px;
+  padding-left: 48px;
 }
 #toc ol:not(:first-child) li + ol li + ol li a {
-  padding-left: 96px;
+  padding-left: 64px;
 }
 #toc a.active {
   font-weight: 700;
@@ -661,6 +663,14 @@ main.wrapper.front-page:before, main.wrapper.static-page:before {
   border-bottom: 1px solid $primary-color;
   padding-bottom: 16px;
   margin-bottom: 48px;
+
+  .portfolio & {
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;  
+  }
+
+
 }
 .page-header {
   background: linear-gradient(165deg, rgba(243, 247, 247, 0.8), rgba(248,249,249,0.8)),$paper-bg,#fefefe repeat center;

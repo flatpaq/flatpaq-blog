@@ -11,9 +11,9 @@ body {
 	line-height: 1.8;
 	font-weight: normal;
 	font-style: normal;
-	background: #fefefe ;
-	overflow-wrap: break-word ;
-	word-wrap : break-word ;
+	background: #fefefe;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 	word-break: break-all;
 	hyphens: auto;
 	-ms-hyphens: auto;
@@ -278,6 +278,10 @@ ol.breadcrumb li.page-cat a.music {
 ol.breadcrumb li.page-cat a.diary {
 	background: $diary-color;
 }
+ol.breadcrumb li.page-cat a.portfolio {
+  // background: #65c9e0;
+  background: $web-color;
+}
 /* quote */
 blockquote {
 	padding: 16px;
@@ -326,6 +330,8 @@ table tr > td {
 	position: static;
 	padding: 12px;
 	border: 1px solid $primary-color;
+  word-wrap: break-word;
+	word-break: break-all;
 }
 table tr > th {
 	font-weight: 700;
@@ -344,9 +350,14 @@ table tr:nth-of-type(odd) {
 }
 /* img */
 article img {
-  background: #f9f9f9;
+  // background: #f9f9f9;
   border-radius: 1px;
   // box-shadow: 0px 2px 32px -28px rgba(0,0,0,0.4), 0px 0px 2px 1px rgba(200,200,200,0.04), 0px 8px 0px 0px rgba(200,200,200,0.02);
+}
+.img-border img {
+  // padding: 1px;
+  border: 1px solid #e1e6ea;
+  margin-bottom: 0px;
 }
 /* code */
 pre {

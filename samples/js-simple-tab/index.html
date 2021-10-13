@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- meta data -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/img/favicon.png">
+
+	<!-- page title -->
+	<title>Javascriptでシンプルなタブ</title>
+
+  <!-- css loading -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="style.css">
+
+	<!-- loading javascript webpacked -->
+	<script src="main.js" defer></script>
+
+</head>
+<body>
+
+<noscript><!-- if users javascript off -->
+	<p id="no_script">Please enable javascript in your browser.</p>
+</noscript>
+
+<!-- content start -->
+
+<div class="tab-wrapper">
+
+  <nav class="tabs">
+    <p class="tab active">Tab 1</p>
+    <p class="tab">Tab 2</p>
+    <p class="tab">Tab 3</p>
+  </nav>
+
+  <div class="tab-contents-area">
+
+    <p class="tab-cont active">
+      Tab 1 Content
+    </p>
+
+    <p class="tab-cont">
+      Tab 2 Content
+    </p>
+
+    <p class="tab-cont">
+      Tab 3 Content
+    </p>
+
+  </div>
+
+</div>
+
+<!-- content end -->
+</body>
+</html>

@@ -1,0 +1,117 @@
+@charset "utf-8";
+.card {
+	background: #fefefe;
+	height: 300px;
+}
+img {
+	margin: 0px;
+}
+.slider-container {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.slider-slides-group {
+	width: 100%;
+	height: 100vh;
+	left: 0%;
+	transition: 0.5s all ease-out;
+	position: absolute;
+}
+.slider-slide {
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+  background-size: cover;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 16px;
+	border-radius: 0px;
+	z-index: 10;
+	transition: 0.5s all ease-out;
+}
+.slider-slide.active-slide {
+	left: 0%;
+}
+.slider-cursor-left {
+	display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center; 
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: #a5ced2;
+	position: absolute;
+	z-index: 30;
+	top: calc(50% - 32px);
+	left: 12px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.slider-cursor-left img {
+	position: relative;
+	left: -2px;
+}
+.slider-cursor-right {
+	display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center; 
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: #a5ced2;
+	position: absolute;
+	z-index: 30;
+	top: calc(50% - 32px);
+	right: 12px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.slider-cursor-righ img {
+	position: relative;
+	right: -2px;
+}
+div.slider-indicators-container {
+	display: flex;
+  -ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center; 
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+ul.slider-indicators {
+	list-style: none;
+	padding: 0px;
+	margin-bottom: 32px;
+	position: absolute;
+	bottom: 12px;
+	display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center; 
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	z-index: 20;
+}
+li.slider-indicator {
+	width: 12px;
+	height: 12px;
+	margin: 4px;
+	background: #43515f;
+	border-radius: 50%;
+	cursor: pointer;
+}
+li.slider-indicator.active-indicator {
+	transform: scale(1.4);
+	background: #ea7979;
+}

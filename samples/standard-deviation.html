@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- meta data -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/img/favicon.png">
+
+	<!-- page title -->
+	<title>分散と標準偏差と偏差値の計算</title>
+
+  <!-- css loading -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- javascript loading -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+  <style>
+    .wrapper {
+      padding-top: 32px;
+    }
+    .window {
+      background: #f8fafa;
+    }
+    .value {
+      font-size: 24px;
+    }
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+      opacity: 0;
+    }
+  </style>
+
+</head>
+<body>
+
+<noscript><!-- if users javascript off -->
+	<p id="no_script">Please enable javascript in your browser.</p>
+</noscript>
+
+<div class="container wrapper">
+
+  <h1>分散と標準偏差と偏差値の計算</h1>
+
+  <div id="app">
+
+    <div class="row">
+
+      <div class="col-md-7">
+
+        <label>カンマ区切りで数値を記述してください(最後のカンマは削除してください)</label>
+        <textarea v-model="scores" v-on:input="computeDeviation" class="form"></textarea>
+
+        <label>偏差値を算出する数値を記述してください</label>
+        <input type="text" v-model="myScore" v-on:input="myScoreValidate" class="form">
+
+      </div>
+
+      <div class="col-md-5">
+
+        <div class="window">
+
+          <label>偏差値</label>
+          <p class="value" v-cloak v-if="myScore">{{ computedData.deviationValue }}</p>
+          <p class="value" v-else>0</p>
+
+          <label>標準偏差</label>
+          <p class="value" v-cloak v-if="scores">{{ computedData.standardDeviation }}</p>
+          <p class="value" v-else>0</p>
+
+          <label>平均</label>
+          <p class="value" v-cloak v-if="scores">{{ computedData.scoreAverage }}</p>
+          <p class="value" v-else>0</p>
+
+          <label>分散</label>
+          <p class="value" v-cloak v-if="scores">{{ computedData.scoreVariant }}</p>
+          <p class="value" v-else>0</p>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  !function(){var e={945:function(){},379:function(e,t,n){"use strict";var r,o=function(){var e={};return function(t){if(void 0===e[t]){var n=document.querySelector(t);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(e){n=null}e[t]=n}return e[t]}}(),a=[];function i(e){for(var t=-1,n=0;n<a.length;n++)if(a[n].identifier===e){t=n;break}return t}function c(e,t){for(var n={},r=[],o=0;o<e.length;o++){var c=e[o],s=t.base?c[0]+t.base:c[0],u=n[s]||0,l="".concat(s," ").concat(u);n[s]=u+1;var d=i(l),f={css:c[1],media:c[2],sourceMap:c[3]};-1!==d?(a[d].references++,a[d].updater(f)):a.push({identifier:l,updater:h(f,t),references:1}),r.push(l)}return r}function s(e){var t=document.createElement("style"),r=e.attributes||{};if(void 0===r.nonce){var a=n.nc;a&&(r.nonce=a)}if(Object.keys(r).forEach((function(e){t.setAttribute(e,r[e])})),"function"==typeof e.insert)e.insert(t);else{var i=o(e.insert||"head");if(!i)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");i.appendChild(t)}return t}var u,l=(u=[],function(e,t){return u[e]=t,u.filter(Boolean).join("\n")});function d(e,t,n,r){var o=n?"":r.media?"@media ".concat(r.media," {").concat(r.css,"}"):r.css;if(e.styleSheet)e.styleSheet.cssText=l(t,o);else{var a=document.createTextNode(o),i=e.childNodes;i[t]&&e.removeChild(i[t]),i.length?e.insertBefore(a,i[t]):e.appendChild(a)}}function f(e,t,n){var r=n.css,o=n.media,a=n.sourceMap;if(o?e.setAttribute("media",o):e.removeAttribute("media"),a&&"undefined"!=typeof btoa&&(r+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),e.styleSheet)e.styleSheet.cssText=r;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(r))}}var p=null,v=0;function h(e,t){var n,r,o;if(t.singleton){var a=v++;n=p||(p=s(t)),r=d.bind(null,n,a,!1),o=d.bind(null,n,a,!0)}else n=s(t),r=f.bind(null,n,t),o=function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(n)};return r(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;r(e=t)}else o()}}e.exports=function(e,t){(t=t||{}).singleton||"boolean"==typeof t.singleton||(t.singleton=(void 0===r&&(r=Boolean(window&&document&&document.all&&!window.atob)),r));var n=c(e=e||[],t);return function(e){if(e=e||[],"[object Array]"===Object.prototype.toString.call(e)){for(var r=0;r<n.length;r++){var o=i(n[r]);a[o].references--}for(var s=c(e,t),u=0;u<n.length;u++){var l=i(n[u]);0===a[l].references&&(a[l].updater(),a.splice(l,1))}n=s}}}}},t={};function n(r){var o=t[r];if(void 0!==o)return o.exports;var a=t[r]={exports:{}};return e[r](a,a.exports,n),a.exports}n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,{a:t}),t},n.d=function(e,t){for(var r in t)n.o(t,r)&&!n.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},function(){"use strict";var e=n(379),t=n.n(e),r=n(945),o=n.n(r);t()(o(),{insert:"head",singleton:!1}),o().locals,new Vue({el:"#app",data:function(){return{scores:"",myScore:"",computedData:{standardDeviation:"",scoreAverage:"",scoreVariant:"",deviationValue:""}}},methods:{myScoreValidate:function(){this.myScore=this.myScore.replace(/\D/g,""),this.computeDeviation()},computeDeviation:function(){this.scores=this.scores.replace(/[^0-9,]/g,"");var e=this.scores.split(",");e=e.map((function(t,n){return Number(e[n])}));for(var t=0,n=0;n<e.length;n++)t+=e[n];var r=t/e.length;this.computedData.scoreAverage=r;for(var o=[],a=0;a<e.length;a++)o[a]=e[a]-r;o=o.map((function(e,t){return Math.pow(o[t],2)}));for(var i=0,c=0;c<o.length;c++)i+=o[c];var s=i/e.length;this.computedData.scoreVariant=s,this.computedData.standardDeviation=Math.sqrt(s);var u=Number(this.myScore);u=50+(u=10*(u-r))/Math.sqrt(s),this.computedData.deviationValue=u}}})}()}();
+</script>
+
+</body>
+</html>

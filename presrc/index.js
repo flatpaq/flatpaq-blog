@@ -389,6 +389,14 @@ const replaceHeadTags = target => {
   })
 }
 
+// Google Analyticsへの送信
+const gaPush = pagename => {
+  ga('send', 'pageview', pagename)
+}
+const gtagPush = pagename => {
+  gtag('config', ga_code, {'page_path' : pagename});
+}
+
 barba.init({
   // debug: true,
   // cacheIgnore: true
@@ -403,7 +411,9 @@ barba.init({
       });
     },
     beforeEnter: ({ next }) => {
-      replaceHeadTags(next)
+      replaceHeadTags(next);
+      gaPush(location.pathname);
+      gtagPush(location.pathname);
     },
     enter: (data) => {
       enterAnimation(data.next.container);

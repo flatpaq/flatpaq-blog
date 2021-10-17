@@ -391,9 +391,10 @@ const replaceHeadTags = target => {
 
 // Google Analyticsへの送信
 const gaPush = pagename => {
-  ga('send', 'pageview', pagename)
+  ga('send', 'pageview', pagename);
 }
 const gtagPush = pagename => {
+  // FIXME: 書き方を間違えているっぽい とりあえず実行しない
   gtag('config', ga_code, {'page_path' : pagename});
 }
 
@@ -413,12 +414,12 @@ barba.init({
     beforeEnter: ({ next }) => {
       replaceHeadTags(next);
       gaPush(location.pathname);
-      gtagPush(location.pathname);
+      // gtagPush(location.pathname);
     },
     enter: (data) => {
       enterAnimation(data.next.container);
     }
-  }]  
+  }]
 });
 
 function leaveAnimation(e) {

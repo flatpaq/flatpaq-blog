@@ -2,7 +2,7 @@
 layout: post
 title: "Markdownをツールバー付きのエディタで編集できる、社内向け情報共有ツールを作りました"
 date: 2021-09-02
-lastmod: 2021-10-13
+lastmod: 2021-10-17
 categories: web
 tags: ruby rails web backend app
 thumbnail: '/assets/media/2021-09-02-cabinet-app-with-rails/cabinet-thumbnail.png'
@@ -44,7 +44,7 @@ Markdownをツールバー付きのエディタで編集できる、社内向け
 
 ### 画像の投稿
 
-画像はエディタにドラッグ&ドロップすると挿入できます。
+画像はMarkdownエディタにドラッグ&ドロップすると挿入できます。
 
 
 {:.img-border}

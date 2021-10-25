@@ -315,11 +315,12 @@ div.table-wrap > table {
 }
 table {
 	background: transparent;
-	// width: 100%;
-	// max-width: 100%;
+	width: 100%;
+	max-width: 100%;
 	display: block;
   overflow-x: scroll;
-  white-space: nowrap;
+  // white-space: nowrap;
+  // table-layout: fixed;
   // -webkit-overflow-scrolling: touch;
 }
 table tr > th,
@@ -332,6 +333,8 @@ table tr > td {
 	border: 1px solid $primary-color;
   word-wrap: break-word;
 	word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 table tr > th {
 	font-weight: 700;
@@ -350,12 +353,10 @@ table tr:nth-of-type(odd) {
 }
 /* img */
 article img {
-  // background: #f9f9f9;
   border-radius: 1px;
-  // box-shadow: 0px 2px 32px -28px rgba(0,0,0,0.4), 0px 0px 2px 1px rgba(200,200,200,0.04), 0px 8px 0px 0px rgba(200,200,200,0.02);
+  width: 100%;
 }
 .img-border img {
-  // padding: 1px;
   border: 1px solid #e1e6ea;
   margin-bottom: 0px;
 }

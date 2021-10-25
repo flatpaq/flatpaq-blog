@@ -2,6 +2,7 @@
 layout: post
 title:  "Sassの基本的な記法まとめ"
 date:   2020-06-27
+lastmod: 2021-09-28
 categories: web
 tags: css sass frontend web
 thumbnail: '/assets/media/2020-06-27-sass-basics/sass-basics-thumbnail.png'

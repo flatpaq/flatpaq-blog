@@ -87,28 +87,42 @@ function nextSlider() {
 }
 
 ; // 3秒ごとにスライドを進める
-
-setInterval(nextSlider, 3000); // モバイル時のみ有効なスワイプ機能
+// setInterval(nextSlider, 3000);
+// -------------
+// スワイプ機能
+// 変数の定義
 
 let startX;
-let startY;
 let moveX;
-let moveY;
-let dist = 30; // スライドをスワイプするタイミングで、touchstartイベントとtouchmoveイベントでスワイプのX座標を計測する。
-// touchstartのX座標の値が、touchmoveのそれより大きければ左スワイプ、小さければ右スワイプとなる
-
+let dist = 30;
 slides.forEach(function (el) {
+  // スライドをスワイプする際に、touchstart時とtouchmove時でのスワイプ操作のX座標を計測する。
+  // touchend時点で、touchstartのX座標の値が、touchmoveのそれより大きければ左スワイプ、小さければ右スワイプとなる
   el.addEventListener('touchstart', function (e) {
     e.preventDefault();
     startX = e.touches[0].pageX;
-    startY = e.touches[0].pageY;
   });
   el.addEventListener('touchmove', function (e) {
     e.preventDefault();
     moveX = e.changedTouches[0].pageX;
-    moveY = e.changedTouches[0].pageY;
   });
   el.addEventListener('touchend', function (e) {
+    if (startX > moveX && startX > moveX + dist) {
+      nextSlider();
+    } else if (startX < moveX && startX + dist < moveX) {
+      prevSlider();
+    }
+  }); // マウス操作の場合
+
+  el.addEventListener('mousedown', function (e) {
+    e.preventDefault();
+    startX = e.pageX;
+  });
+  el.addEventListener('mousemove', function (e) {
+    e.preventDefault();
+    moveX = e.pageX;
+  });
+  el.addEventListener('mouseup', function (e) {
     if (startX > moveX && startX > moveX + dist) {
       nextSlider();
     } else if (startX < moveX && startX + dist < moveX) {

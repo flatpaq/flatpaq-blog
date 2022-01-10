@@ -6,3 +6,6 @@ _drafts
 .jekyll-metadata
 vendor
 node_modules
+
+portfolio
+_portfolio

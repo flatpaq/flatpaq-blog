@@ -13,21 +13,21 @@ thumbnail: '/assets/media/2020-11-29-npm-and-webpack-basics/npm-webpack.png'
 
 ## はじめに
 
-Javascriptという言語は、それ自体はシンプルに書き始めることができます。HTMLとCSS、そしてJavascriptの、クライアントサイドの基本的なセットであれば、複雑で高度な開発環境は必要がないかもしれません。
+JavaScriptという言語は、それ自体はシンプルに書き始めることができます。HTMLとCSS、そしてJavaScriptの、クライアントサイドの基本的なセットであれば、複雑で高度な開発環境は必要がないかもしれません。
 
 しかし、外部ライブラリを柔軟に導入したい場合、どうしてもパッケージ管理システムなどが必要になってきます。さらに、**仮にパッケージ管理システムを導入したとしても、現行の仕様ではそのままライブラリを読み込むだけでは外部ライブラリを利用できません。それらのライブラリを実行可能な状態にするツールが必要になります。**  
-また、Javascriptはブラウザごとに実装されている技術に差があり、これが処理や表示の違いなど、バグの原因になりやすいため、どのブラウザでも互換性のあるコードにする必要があります。
+また、JavaScriptはブラウザごとに実装されている技術に差があり、これが処理や表示の違いなど、バグの原因になりやすいため、どのブラウザでも互換性のあるコードにする必要があります。
 
-このように、Javascriptは書き進めるとだんだんシンプルではなくなってきます。また今日では、JavascriptはWebページにちょっとした動きを追加する言語というだけではなく、大規模な開発にも使われることが当たり前となっています。そこで、上記のような開発環境にまつわる問題点を、なるべく解決してくれる便利なツールがたくさん作られました。その最も基本と言えるものが**npm**と**webpack**です。
+このように、JavaScriptは書き進めるとだんだんシンプルではなくなってきます。また今日では、JavaScriptはWebページにちょっとした動きを追加する言語というだけではなく、大規模な開発にも使われることが当たり前となっています。そこで、上記のような開発環境にまつわる問題点を、なるべく解決してくれる便利なツールがたくさん作られました。その最も基本と言えるものが**npm**と**webpack**です。
 
 **上で述べた問題点は、npmとwebpackを利用することで解決できます。さらに、上記の問題だけはなく、開発を効率的にしてくれる様々な機能があります。**  
-本記事では、現代のJavascript開発環境において必要不可欠なツール、npmとwebpackの基本的な使い方を解説します。
+本記事では、現代のJavaScript開発環境において必要不可欠なツール、npmとwebpackの基本的な使い方を解説します。
 
 ## npmとは
 
 [npm](https://www.npmjs.com/)とは、*Node Package Manager*の略で、フロントエンド開発で利用されている**パッケージ管理システム**です。
 
-npmは本来、Javascriptをサーバサイドで実行できる環境である[Node.js](https://nodejs.org/ja/)のパッケージ管理システムですが、サーバ環境のみならずローカル環境においても様々なパッケージの利用が行えるため、フロントエンド開発における重要なエコシステムとなっています。
+npmは本来、JavaScriptをサーバサイドで実行できる環境である[Node.js](https://nodejs.org/ja/)のパッケージ管理システムですが、サーバ環境のみならずローカル環境においても様々なパッケージの利用が行えるため、フロントエンド開発における重要なエコシステムとなっています。
 
 npmを利用すると、外部ライブラリのインストールやアップデート、あるいは自作したパッケージの共有などを簡単に行えます。
 
@@ -37,13 +37,13 @@ npmと同じくらい人気があり、互換性のあるパッケージ管理�
 
 ## webpackとは
 
-[webpack](https://webpack.js.org/)とは、Javascriptをはじめとしたフロントエンドのファイルの依存関係を解決し、1つのファイルにまとめてくれる**モジュールバンドラーと呼ばれるツール**です。非常に様々な機能があり、主に以下の点においてフロントエンド開発では欠かせないツールとなっています。
+[webpack](https://webpack.js.org/)とは、JavaScriptをはじめとしたフロントエンドのファイルの依存関係を解決し、1つのファイルにまとめてくれる**モジュールバンドラーと呼ばれるツール**です。非常に様々な機能があり、主に以下の点においてフロントエンド開発では欠かせないツールとなっています。
 
 
-- ECMAScript6以降の新しい仕様で記述したJavascriptや、TypescriptなどのJavascript拡張言語(スーパーセット)を、現在普及しているブラウザに互換性のある形式に変換(トランスパイル)できる。
-- Javascriptのモジュールを利用した際、依存関係を解決し1つのファイルにまとめることができる。
+- ECMAScript6以降の新しい仕様で記述したJavaScriptや、TypescriptなどのJavaScript拡張言語(スーパーセット)を、現在普及しているブラウザに互換性のある形式に変換(トランスパイル)できる。
+- JavaScriptのモジュールを利用した際、依存関係を解決し1つのファイルにまとめることができる。
 - npmなどのパッケージ管理システムからインストールした外部パッケージを利用可能な状態にできる。
-- SassをCSSのコードにトランスパイルでき、かつCSSをJavascriptとともにバンドルできる。
+- SassをCSSのコードにトランスパイルでき、かつCSSをJavaScriptとともにバンドルできる。
 - コードを圧縮して軽量化できる。
 - 1つのファイルにまとめるため、HTTPリクエストの数を減らすことができる。
 - 1つのファイルにまとめずに好きなように分割できるなど、柔軟な設定ができる。
@@ -139,7 +139,7 @@ project-name/package.json
 }
 ```
 
-`package.json`は、拡張子にあるようにJSON(JavaScript Object Notation)と呼ばれる形式で表記されています。名前の通りJavascriptのオブジェクト構文とよく似た書き方になっています。馴染みのない方でもなんとなく読めるかと思います。
+`package.json`は、拡張子にあるようにJSON(JavaScript Object Notation)と呼ばれる形式で表記されています。名前の通りJavaScriptのオブジェクト構文とよく似た書き方になっています。馴染みのない方でもなんとなく読めるかと思います。
 
 **`package.json`は、このプロジェクトの名前や作者といった基本情報に加え、どの外部パッケージをどのバージョンで用いるのか(依存するのか)などを表記します。いわばプロジェクトを管理するための設定ファイルです。**  
 **`package.json`を直下に置いたこのディレクトリが、ひとつのプロジェクトとして認識され、また共有する際にはこのプロジェクト自体がパッケージとなります。**  
@@ -465,7 +465,7 @@ project-name/
 
 `dist/index.html`のコンテンツを記入します。  
 15行目で、webpackによって出力されたファイルを`<script src="main.js" defer></script>`で読み込むように設定しています。  
-また本記事では、webpackで処理した後に、JavascriptとCSSを分岐して出力するオプションをつけるため、12行目の`<link rel="stylesheet" href="style.css">`でCSSファイルを読み込むようにしています。
+また本記事では、webpackで処理した後に、JavaScriptとCSSを分岐して出力するオプションをつけるため、12行目の`<link rel="stylesheet" href="style.css">`でCSSファイルを読み込むようにしています。
 
 `body`要素内には、見出しとSimpleMDE用のコードを記述しています。バンドルが正しく行われれば、Markdownエディタが表示されるようにしています。
 
@@ -485,7 +485,7 @@ project-name/dist/index.html
   <!-- webpack処理後のCSSファイルを読み込む -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- webpack処理後のJavascriptファイルを読み込む -->
+  <!-- webpack処理後のJavaScriptファイルを読み込む -->
   <script src="main.js" defer></script>
 
 </head>
@@ -527,7 +527,7 @@ h1 {
 7行目から9行目までのコードでSimpleMDEをロードしています。  
 最後に、12行目では、Sassファイルを相対パスでimportしています。
 
-**Javascriptファイルの中にCSSやSassも読み込むようにしています。**
+**JavaScriptファイルの中にCSSやSassも読み込むようにしています。**
 
 {:.file-path}
 project-name/src/index.js
@@ -547,7 +547,7 @@ import "./style.scss"
 ```
 
 <section class="window info" markdown="block">
-Javascriptのimport文の詳しい使い方については下記リンクが参考になるかと思います。  
+JavaScriptのimport文の詳しい使い方については下記リンクが参考になるかと思います。  
 
 {:.embed}
 [import - JavaScript MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import){:target="_blank"}{:rel="noopener noreferrer"}
@@ -580,13 +580,13 @@ $ npm install -D webpack webpack-cli @babel/core @babel/preset-env babel-loader 
 - mini-css-extract-plugin
 
 
-上記のパッケージのうち、webpack本体は`webpack`と`webpack-cli`です。**webpackに取り込まれたJavascriptやCSSなどのファイルは、一つのJavascriptファイルにバンドルされます。**
+上記のパッケージのうち、webpack本体は`webpack`と`webpack-cli`です。**webpackに取り込まれたJavaScriptやCSSなどのファイルは、一つのJavaScriptファイルにバンドルされます。**
 
-`babel`と書かれたパッケージは、[Babel](https://babeljs.io/)というトランスパイラのパッケージです。**Babel**は、ECMAScript6以降の新しい仕様で記述したJavascriptや、TypescriptなどのJavascript拡張言語(スーパーセット)を、現在普及している**ブラウザに互換性のある形式に変換(トランスパイル)してくれるツール**です。  
+`babel`と書かれたパッケージは、[Babel](https://babeljs.io/)というトランスパイラのパッケージです。**Babel**は、ECMAScript6以降の新しい仕様で記述したJavaScriptや、TypescriptなどのJavaScript拡張言語(スーパーセット)を、現在普及している**ブラウザに互換性のある形式に変換(トランスパイル)してくれるツール**です。  
 
 `css-loader`と`style-loader`は、CSSをバンドルするためのパッケージで、`sass`、`sass-loader`はSassをCSSにトランスパイルするためのパッケージです。  
 
-`mini-css-extract-plugin`は、webpackに取り込んだCSSを、再度CSSファイルとして出力するためのパッケージです。Javascriptと一つにまとめたくない場合などに利用します。
+`mini-css-extract-plugin`は、webpackに取り込んだCSSを、再度CSSファイルとして出力するためのパッケージです。JavaScriptと一つにまとめたくない場合などに利用します。
 
 
 パッケージのインストールを終えた後の`package.json`の内容は以下のようになったかと思います。  
@@ -631,7 +631,7 @@ project-name/package.json
 
 ### Entry
 
-**Entryは、エントリポイントを指定する機能です。**エントリポイントとは、webpackがバンドルを行う開始点となるJavascriptファイルのことです。
+**Entryは、エントリポイントを指定する機能です。**エントリポイントとは、webpackがバンドルを行う開始点となるJavaScriptファイルのことです。
 
 
 ### Output

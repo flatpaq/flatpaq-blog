@@ -185,6 +185,6 @@ TODOリストのように使用できますね。
 
 ## 数式
 
-お使いのMarkdownの環境によりますが、[Mathjax](https://www.mathjax.org/)などの数式を表記できるJavascriptライブラリを利用すると、Markdownファイルに数式を書き、表示することができます。  
+お使いのMarkdownの環境によりますが、[Mathjax](https://www.mathjax.org/)などの数式を表記できるJavaScriptライブラリを利用すると、Markdownファイルに数式を書き、表示することができます。  
 詳しくは割愛します。
 

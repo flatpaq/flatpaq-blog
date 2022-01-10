@@ -28,7 +28,7 @@ thumbnail: '/assets/media/2021-04-12-typing-game-made-with-javascript/typingforg
 {:.embed}
 [Typingforge sample]({{ '/samples/typingforge/' | relative_url }}){:target="_blank"}{:rel="noopener noreferrer"}
 
-非常にシンプルなJavascriptで書いています。Webサービスではないので、アップロードされたファイルの中身が他者に知られることはありません。
+非常にシンプルなJavaScriptで書いています。Webサービスではないので、アップロードされたファイルの中身が他者に知られることはありません。
 
 コードをGithubに載せています。`dist`ディレクトリ以下に完成品をまとめています。ご自身のローカル環境で使用したい場合はこちらをご利用ください。
 

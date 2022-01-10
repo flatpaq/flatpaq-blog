@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Typescriptのセットアップ"
+title:  "TypeScriptのセットアップ"
 date:   2021-01-07
 lastmod: 2021-10-09
 categories: web
@@ -8,12 +8,12 @@ tags: javascript web frontend ui
 thumbnail: '/assets/media/2021-01-07-typescript-setup/typescript-setup-thumbnail.png'
 ---
 
-![Typescriptのセットアップのサムネイル]({{ '/assets/media/2021-01-07-typescript-setup/typescript-setup-thumbnail.svg' | relative_url }})
+![TypeScriptのセットアップのサムネイル]({{ '/assets/media/2021-01-07-typescript-setup/typescript-setup-thumbnail.svg' | relative_url }})
 
 
-型注釈やクラス、インターフェースなど、javascriptをより強力にするスーパーセット、Typescriptの実行環境を構築した際のメモです。
+型注釈やクラス、インターフェースなど、javaScriptをより強力にするスーパーセット、TypeScriptの実行環境を構築した際のメモです。
 
-## Typescriptのインストール
+## TypeScriptのインストール
 
 ### webpackを使用する場合
 
@@ -34,7 +34,7 @@ $ npm install -D webpack webpack-cli @babel/core @babel/preset-env babel-loader 
 $ npm install -D typescript ts-loader
 ```
 
-`typescript`パッケージはTypescriptの本体となるもので、`ts-loader`はwebpackでトランスパイルする際に使用します。
+`typescript`パッケージはTypeScriptの本体となるもので、`ts-loader`はwebpackでトランスパイルする際に使用します。
 
 インストールが完了したら`tsconfig.jsonの作成`の項へ進んでください。
 
@@ -71,8 +71,8 @@ $ npm install -D typescript
 
 ## tsconfig.jsonの作成
 
-Typescriptのインストールが完了したら、下記コマンド`npx tsc --init`を実行します。  
-するとTypescriptの設定を行うことができる`tsconfig.json`が作成されます。
+TypeScriptのインストールが完了したら、下記コマンド`npx tsc --init`を実行します。  
+するとTypeScriptの設定を行うことができる`tsconfig.json`が作成されます。
 
 ```bash
 $ npx tsc --init
@@ -106,13 +106,13 @@ project-name/
     └-- 以下略
 ```
 
-`src`ディレクトリ内にTypescriptのファイルとなる`index.ts`を作成してください。  
+`src`ディレクトリ内にTypeScriptのファイルとなる`index.ts`を作成してください。  
 また、`dist`ディレクトリに`index.html`を作成してください。
 
 {:.file-path}
 index.ts
 ```ts
-// Typescriptを使う
+// TypeScriptを使う
 let numberArray: number[] = [10, 20]
 
 function func(i: number[]): number {
@@ -133,15 +133,15 @@ index.html
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
-  <title>テストページ - Typescriptのセットアップ</title>
+  <title>テストページ - TypeScriptのセットアップ</title>
 
-  <!-- webpack処理後のJavascriptファイルを読み込む -->
+  <!-- webpack処理後のJavaScriptファイルを読み込む -->
   <script src="main.js" defer></script>
 
 </head>
 <body>
 
-  <h1>Typescriptのセットアップ</h1>
+  <h1>TypeScriptのセットアップ</h1>
 
 
 </body>
@@ -215,11 +215,11 @@ module.exports = {
         ],
       },
 
-      // Typescript用のローダー
+      // TypeScript用のローダー
       {
         // 拡張子 .ts の場合
         test: /\.ts$/,
-        // TypeScript をコンパイルする
+        // TypeScriptをコンパイルする
         use: 'ts-loader',
       },
 
@@ -313,11 +313,11 @@ $ npx tsc src/index.ts --outFile dist/main.js
 
 ## 型定義ファイルのインストール
 
-JavascriptライブラリによってはTypescriptの型定義に対応していないものがあります。そうした場合`npm install @types/パッケージ名`とすることで型定義ファイルをインストールすることができます。
+JavaScriptライブラリによってはTypeScriptの型定義に対応していないものがあります。そうした場合`npm install @types/パッケージ名`とすることで型定義ファイルをインストールすることができます。
 
 ```bash
 $ npm install @types/パッケージ名
 ```
 
-Typescriptに対応しているパッケージは`@types/`が不要な場合もあります。
+TypeScriptに対応しているパッケージは`@types/`が不要な場合もあります。
 

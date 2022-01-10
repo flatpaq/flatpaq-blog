@@ -20,7 +20,7 @@ thumbnail: '/assets/media/2020-10-03-vanilla-javascript-slider/slider-thumbnail.
 下記サンプルです。
 
 {:.embed}
-[Javascript Simple Slider]({{ '/samples/vanilla-javascript-slider/' | relative_url }}){:target="_blank"}{:rel="noopener noreferrer"}
+[JavaScript Simple Slider]({{ '/samples/vanilla-javascript-slider/' | relative_url }}){:target="_blank"}{:rel="noopener noreferrer"}
 
 
 ## ファイル構成
@@ -59,7 +59,7 @@ index.html
   <meta name="format-detection" content="telephone=no">
 
   <!-- Page Title -->
-  <title>Javascript Simple Slider</title>
+  <title>JavaScript Simple Slider</title>
 
   <!-- Loading CSS -->
   <link rel="stylesheet" href="css/reset.css">

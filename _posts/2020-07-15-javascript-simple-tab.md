@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Javascriptでシンプルなタブを作る"
+title:  "JavaScriptでシンプルなタブを作る"
 date:   2020-07-15
 categories: web
 tags: javascript web frontend ui
 thumbnail: '/assets/media/2020-07-15-javascript-simple-tab/javascript-simple-tab-thumbnail.png'
 ---
 
-プレーンなJavascriptでのシンプルなタブ機能です。
+プレーンなJavaScriptでのシンプルなタブ機能です。
 
 {:.embed}
-[Javascriptでシンプルなタブ]({{ '/samples/js-simple-tab/' | relative_url }}){:target="_blank"}{:rel="noopener noreferrer"}
+[JavaScriptでシンプルなタブ]({{ '/samples/js-simple-tab/' | relative_url }}){:target="_blank"}{:rel="noopener noreferrer"}
 
 {:.file-path}
 index.html

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ひとまず始めるTypescript"
+title:  "ひとまず始めるTypeScript"
 date:   2021-02-12
 lastmod: 2021-10-24
 categories: web
@@ -9,16 +9,16 @@ thumbnail: '/assets/media/2021-02-12-getting-started-with-typescript/getting-sta
 ---
 
 
-![ひとまず始めるTypescriptのサムネイル]({{ '/assets/media/2021-02-12-getting-started-with-typescript/getting-started-with-typescript-thumbnail.png' | relative_url }})
+![ひとまず始めるTypeScriptのサムネイル]({{ '/assets/media/2021-02-12-getting-started-with-typescript/getting-started-with-typescript-thumbnail.png' | relative_url }})
 
 
 
 
-型注釈やクラス、インターフェースなど、javascriptをより強力にするスーパーセットであるTypescriptを書き始めるにあたって、最低限これだけ押さえておけばひとまず大丈夫かなというそんな備忘録です。
+型注釈やクラス、インターフェースなど、JavaScriptをより強力にするスーパーセットであるTypeScriptを書き始めるにあたって、最低限これだけ押さえておけばひとまず大丈夫かなというそんな備忘録です。
 
-Javascriptの説明については省略しています。
+JavaScriptの説明については省略しています。
 
-Typescriptの環境構築については下記の記事を参考にしてください。
+TypeScriptの環境構築については下記の記事を参考にしてください。
 
 <section class="card-embed">
 
@@ -32,7 +32,7 @@ Typescriptの環境構築については下記の記事を参考にしてくだ�
   </div>
 
   <div class="card-embed-heading-area col-sm-7 order-sm-first">
-    <h1>Typescriptのセットアップ</h1>
+    <h1>TypeScriptのセットアップ</h1>
   </div>
 
   </div>
@@ -81,7 +81,7 @@ let luckyNumbers: number[] = [1033, 1046];
 let a: any = "abc";
 ```
 
-便利な注釈方法ですが、Typescriptを使う意義が薄れてしまうためあまり乱用すべきではないでしょう。
+便利な注釈方法ですが、TypeScriptを使う意義が薄れてしまうためあまり乱用すべきではないでしょう。
 
 
 ## 型変換

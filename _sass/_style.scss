@@ -19,7 +19,7 @@
   opacity: 0;
   visibility: hidden;
   background: rgba(254, 254, 254, 0.7);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   // transform: translateY(100%);
 }
 .transition-mask {
@@ -1084,7 +1084,7 @@ footer .tags > li a:after {
   //   }
   // }
   header .header-cont.is-sticky {
-    padding: 9px 0px 8px;
+    padding: 10px 0px 9px;
   }
 
   header .mobile-menu {

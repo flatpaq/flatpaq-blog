@@ -20,6 +20,7 @@
   visibility: hidden;
   background: rgba(254, 254, 254, 0.7);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   // transform: translateY(100%);
 }
 .transition-mask {
@@ -480,6 +481,7 @@ main.wrapper:before {
   &.active {
     display: block;
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
 }
 

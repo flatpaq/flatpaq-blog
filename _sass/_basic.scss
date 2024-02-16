@@ -236,7 +236,7 @@ ol.breadcrumb li {
 	position: relative;
 }
 ol.breadcrumb li.breadcrumb-home a:before {
-	font-family: 'icon';
+	font-family: 'icomoon';
 	color: $primary-color;
 	content: "\e905";
 	position: relative;
@@ -573,7 +573,7 @@ dl dt:last-of-type, dl dd:last-of-type {
 	background: linear-gradient(165deg, rgba(207, 245, 240, 0.4), rgba(193, 236, 253, 0.4)), url("../img/paper.png"), #fefefe repeat center;
 }
 .window.note:after {
-	font-family: 'icon';
+	font-family: 'icomoon';
 	color: $primary-color;
 	font-size: 22px;
 	content: "\e903";
@@ -597,7 +597,7 @@ dl dt:last-of-type, dl dd:last-of-type {
 // 	background: #ec6f6b;
 // 	border-radius: 50%;
 // 	z-index: 2;
-// 	font-family: 'icon';
+// 	font-family: 'icomoon';
 // 	content: "\e900";
 // 	color: #fefefe;
 // 	font-size: 87%;
@@ -742,30 +742,32 @@ transition-delay: 0.075s;
 }
 /* icon font */
 @font-face {
-  font-family: 'icon';
-  src: url('../fonts/icon.woff?rvcbr1') format('woff');
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.woff?4nm745') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
+
 [class^="icon-"], [class*=" icon-"] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	display: inline-block;
-  font-family: 'icon' !important;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  display: inline-block;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-	line-height: 1;
+  line-height: 1;
+  position: relative;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	position: relative;
-}
-.icon-alert:before {
-  content: "\e900";
+  -moz-osx-font-smoothing: grayscale;
 }
 .icon-bandcamp:before {
+  content: "\e900";
+}
+.icon-bluesky:before {
   content: "\e901";
 }
 .icon-calendar:before {
@@ -789,16 +791,9 @@ transition-delay: 0.075s;
 .icon-search:before {
   content: "\e908";
 }
-.icon-share:before {
+.icon-youtube:before {
   content: "\e909";
 }
-.icon-twitter:before {
-  content: "\e90a";
-}
-.icon-youtube:before {
-  content: "\e90b";
-}
-
 // if printed
 @media print {
   body {

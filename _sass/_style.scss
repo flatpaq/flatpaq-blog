@@ -151,8 +151,8 @@ header nav.mobile-menu {
   transition: all 0.12s ease-out;
   // box-shadow: 0px 3px 0px 0px rgba(100,100,100,0.12), 0px 4px 1px 0px rgba(100,100,100,0.06);
 }
-.social-icon.icon-twitter::before {
-  color: #1ca1f2;
+.social-icon.icon-bluesky::before {
+  color: #0a7afe;
 }
 .social-icon.icon-rss::before {
   color: #ff9540;
@@ -160,13 +160,9 @@ header nav.mobile-menu {
 .social-icon.icon-github::before {
   color: $primary-color;
 }
-.social-icon.icon-share {
-  background: #999;
-}
 .social-icon::before {
   font-size: 18px;
-  // font-size: 20px;
-  // color: #fefefe;
+  position: absolute;
 }
 /* footer social icons */
 footer {
@@ -175,16 +171,17 @@ footer {
     margin-left: 16px;
   }
 
-  .social-icon.icon-twitter, .social-icon.icon-rss, .social-icon.icon-github {
+  .social-icon.icon-bluesky, .social-icon.icon-rss, .social-icon.icon-github {
     background: #f3f0e5;
   }
 
   .social-icon::before {
     font-size: 18px;
     color: $primary-color;
+    position: absolute;
   }
 
-  .social-icon.icon-twitter::before {
+  .social-icon.icon-bluesky::before {
     color: $primary-color;
   }
 
@@ -615,7 +612,7 @@ main.wrapper.front-page:before, main.wrapper.static-page:before {
 }
 .front-page .page-date-area i {
   border-radius: 50%;
-  padding: 8px;
+  padding: 8px 9px;
 }
 .front-page .page-date-area time {
   background: none;

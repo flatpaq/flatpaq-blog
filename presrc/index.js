@@ -389,15 +389,6 @@ const replaceHeadTags = target => {
   })
 }
 
-// Google Analyticsへの送信
-const gaPush = pagename => {
-  ga('send', 'pageview', pagename);
-}
-const gtagPush = pagename => {
-  // FIXME: 書き方を間違えているっぽい とりあえず実行しない
-  gtag('config', ga_code, {'page_path' : pagename});
-}
-
 barba.init({
   // debug: true,
   // cacheIgnore: true
@@ -413,7 +404,7 @@ barba.init({
     },
     beforeEnter: ({ next }) => {
       replaceHeadTags(next);
-      gaPush(location.pathname);
+      // gaPush(location.pathname);
       // gtagPush(location.pathname);
     },
     enter: (data) => {
